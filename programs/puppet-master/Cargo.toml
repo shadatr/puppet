@@ -1,12 +1,12 @@
 [package]
-name = "puppet"
+name = "puppet-master"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "puppet"
+name = "puppet_master"
 
 [features]
 no-entrypoint = []
@@ -18,4 +18,5 @@ build_hasher_simple_hash_one = []
 
 [dependencies]
 anchor-lang = "0.29.0"
+puppet = { path = "../puppet", features = ["cpi"]}
 ahash = "=0.8.6"
